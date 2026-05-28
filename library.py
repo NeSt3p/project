@@ -32,7 +32,7 @@ class Library: #класс библиотеки
 
     def show_books(self): #показать книги
         if len(self.books) == 0: #если книг нет
-            print("Книг нет")
+            print("Книг нет(")
             return
 
         for book in self.books: #перебираем книги
@@ -51,7 +51,7 @@ class Library: #класс библиотеки
 
     def show_readers(self): #показать читателей
         if len(self.readers) == 0: #если читателей нет
-            print("Читателей нет")
+            print("Читателей нет(")
             return
 
         #выводим читателей
@@ -63,7 +63,7 @@ class Library: #класс библиотеки
         for book in self.books: #ищем книгу
             if book.title == title: #если нашли книгу
                 if book.taken == True: #если книга уже выдана
-                    print("Книга уже выдана")
+                    print("Книга уже выдана!")
                     return
 
                 for reader in self.readers: #ищем читателя
@@ -72,7 +72,7 @@ class Library: #класс библиотеки
                         reader.books.append(title) #добавляем книгу читателю
                         print("Книга выдана!")
                         return
-        print("Ошибка")
+        print("Ошибка(")
 
     def return_book(self, title, reader_name): #возврат книги
         for book in self.books: #ищем книгу
@@ -84,7 +84,7 @@ class Library: #класс библиотеки
                             reader.books.remove(title)
                         print("Книга возвращена!")
                         return
-        print("Ошибка")
+        print("Ошибка(")
 
     def save_data(self): #сохранение данных в файл
         data = {
@@ -195,4 +195,4 @@ while True:
         
     #ошибка
     else:
-        print("Неверный ввод!")
+        print("Неверный ввод!!")
